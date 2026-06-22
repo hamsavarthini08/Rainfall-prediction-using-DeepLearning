@@ -1,0 +1,42 @@
+name,district,latitude,longitude,coastal,elevation,population_density,region
+Chennai,Chennai,13.0827,80.2707,Yes,6,26903,North East
+Coimbatore,Coimbatore,11.0168,76.9558,No,411,6823,West
+Madurai,Madurai,9.9252,78.1198,No,101,8232,South Central
+Trichy,Tiruchirappalli,10.7905,78.7047,No,88,5832,Central
+Salem,Salem,11.6643,78.1460,No,278,4598,West
+Tirunelveli,Tirunelveli,8.7139,77.7567,Yes,47,4582,South
+Vellore,Vellore,12.9165,79.1325,No,216,3456,North
+Erode,Erode,11.3410,77.7172,No,183,3876,West
+Thanjavur,Thanjavur,10.7870,79.1378,Yes,88,4231,East
+Kanyakumari,Kanyakumari,8.0883,77.5385,Yes,30,4567,South
+Virudhunagar,Virudhunagar,9.5680,77.9624,No,102,3890,South
+Dindigul,Dindigul,10.3624,77.9695,No,268,3456,South Central
+Cuddalore,Cuddalore,11.7446,79.7685,Yes,6,4567,East
+Kanchipuram,Kanchipuram,12.8342,79.7038,Yes,83,2345,North
+Namakkal,Namakkal,11.2210,78.1674,No,225,3890,West
+Karur,Karur,10.9601,78.0766,No,122,2987,Central
+Perambalur,Perambalur,11.2333,78.8833,No,128,2345,Central
+Pudukkottai,Pudukkottai,10.3833,78.8000,No,100,2567,East
+Ramanathapuram,Ramanathapuram,9.3833,78.8333,Yes,2,1890,South
+Sivagangai,Sivagangai,9.8500,78.4833,No,102,2678,South
+Theni,Theni,10.0100,77.4767,No,301,3123,West
+Thoothukkudi,Thoothukkudi,8.7642,78.1348,Yes,4,3456,South
+Tiruppur,Tiruppur,11.1075,77.3398,No,300,5678,West
+Tiruvallur,Tiruvallur,13.1432,79.9089,Yes,12,2345,North
+Tiruvannamalai,Tiruvannamalai,12.2253,79.0747,No,200,2890,North
+Nilgiris,Nilgiris,11.4102,76.6950,No,2200,890,West
+Ariyalur,Ariyalur,11.1385,79.0756,No,76,2345,Central
+Chengalpattu,Chengalpattu,12.7000,79.9833,Yes,36,3456,North East
+Kallakurichi,Kallakurichi,11.7333,78.9667,No,150,2678,North
+Mayiladuthurai,Mayiladuthurai,11.1000,79.6500,Yes,16,3123,East
+Nagapattinam,Nagapattinam,10.7667,79.8333,Yes,8,2890,East
+Tenkasi,Tenkasi,8.9667,77.3167,No,156,2456,South
+Tirupathur,Tirupathur,12.5000,78.5667,No,390,2345,North
+Ranipet,Ranipet,12.9165,79.3325,No,200,2987,North
+Chennai North,Chennai,13.2100,80.2800,Yes,6,28907,North East
+Chennai South,Chennai,12.9800,80.2500,Yes,6,25678,North East
+Chennai Central,Chennai,13.0800,80.2700,Yes,6,27890,North East
+Coimbatore North,Coimbatore,11.0300,76.9500,No,411,7234,West
+Coimbatore South,Coimbatore,11.0000,76.9700,No,411,6890,West
+Madurai North,Madurai,9.9700,78.1200,No,101,8567,South Central
+Madurai South,Madurai,9.8800,78.1100,No,101,8234,South Central
