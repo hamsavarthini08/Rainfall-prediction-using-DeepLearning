@@ -1,0 +1,9 @@
+## Static Assets Setup
+
+The application requires a background image for the hero section. Place a file named `weather-bg.jpg` in the `static/images/` directory.
+
+You can download a suitable weather-themed background image from:
+- Unsplash: https://unsplash.com/s/photos/weather-rain
+- Pexels: https://www.pexels.com/search/weather/
+
+Or create a simple gradient background by using the CSS fallback already implemented.
