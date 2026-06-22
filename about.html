@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Rainfall Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-cloud-rain"></i>
+            <span>RainPredict TN</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="/about" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+    </nav>
+
+    <div style="padding: 6rem 5% 2rem; max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">About The Project</h1>
+            <p style="color: var(--text-gray); font-size: 1.2rem;">Advanced Deep Learning Based Rainfall Prediction System for Tamilnadu</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem;">
+            <div>
+                <h2 style="margin-bottom: 1.5rem;"><i class="fas fa-bullseye" style="color: var(--primary-color);"></i> Project Objective</h2>
+                <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 1rem;">
+                    The primary objective of this project is to develop an accurate, location-based rainfall 
+                    prediction system for Tamilnadu using advanced deep learning techniques. By analyzing 
+                    historical weather patterns and real-time data, we aim to provide reliable predictions 
+                    that can aid in agricultural planning, disaster management, and daily decision-making.
+                </p>
+            </div>
+            <div>
+                <h2 style="margin-bottom: 1.5rem;"><i class="fas fa-brain" style="color: var(--secondary-color);"></i> Deep Learning Approach</h2>
+                <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 1rem;">
+                    We employ two state-of-the-art deep learning architectures: LSTM (Long Short-Term Memory) 
+                    and CNN-LSTM hybrid networks. These models are specifically designed to capture temporal 
+                    dependencies in weather data and spatial patterns across different geographical locations 
+                    in Tamilnadu.
+                </p>
+            </div>
+        </div>
+
+        <div style="background: var(--card-bg); border-radius: 1rem; padding: 2rem; margin-bottom: 3rem;">
+            <h2 style="margin-bottom: 2rem;">Technology Stack</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem;">
+                <div style="text-align: center;">
+                    <i class="fab fa-python" style="font-size: 3rem; color: #3776AB;"></i>
+                    <h4>Python</h4>
+                    <p style="color: var(--text-gray);">Core Programming</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-brain" style="font-size: 3rem; color: #FF6F00;"></i>
+                    <h4>TensorFlow</h4>
+                    <p style="color: var(--text-gray);">Deep Learning</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-chart-line" style="font-size: 3rem; color: #FF6384;"></i>
+                    <h4>LSTM/CNN</h4>
+                    <p style="color: var(--text-gray);">Neural Networks</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-flask" style="font-size: 3rem; color: #10b981;"></i>
+                    <h4>Flask</h4>
+                    <p style="color: var(--text-gray);">Web Framework</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 3rem;">
+            <h2 style="margin-bottom: 1.5rem;">Model Architecture</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 1rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">LSTM Network</h3>
+                    <ul style="color: var(--text-gray); line-height: 2; list-style: none;">
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> 3 LSTM layers with dropout</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Sequence length: 30 days</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> 100-50-25 units</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Adam optimizer</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> MSE loss function</li>
+                    </ul>
+                </div>
+                <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 1rem;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">CNN-LSTM Hybrid</h3>
+                    <ul style="color: var(--text-gray); line-height: 2; list-style: none;">
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> 2 Conv1D layers (64,32 filters)</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> MaxPooling1D layers</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> 2 LSTM layers (50,25 units)</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Dropout for regularization</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Dense output layer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="/dashboard" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">
+                <i class="fas fa-arrow-right"></i> Try the Dashboard
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="color: var(--text-gray);">© 2026 RainPredict TN. Advanced Rainfall Prediction System for Tamilnadu</p>
+        </div>
+    </footer>
+</body>
+</html>

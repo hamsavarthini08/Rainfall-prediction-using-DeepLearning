@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall Prediction System - Tamilnadu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-cloud-rain"></i>
+            <span>RainPredict TN</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <i class="fas fa-cloud-sun-rain" style="font-size: 4rem; color: #2563eb; margin-bottom: 1rem;"></i>
+            <h1>Rainfall Prediction System</h1>
+            <p>Advanced deep learning based rainfall and wind direction prediction for Tamilnadu regions</p>
+            <a href="/dashboard" class="btn btn-primary">
+                <i class="fas fa-arrow-right"></i> Get Started
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section style="padding: 4rem 5%; background: var(--card-bg);">
+        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Key Features</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div style="text-align: center;">
+                <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                <h3>Location Based</h3>
+                <p style="color: var(--text-gray);">Accurate predictions for all major districts in Tamilnadu</p>
+            </div>
+            <div style="text-align: center;">
+                <i class="fas fa-brain" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                <h3>Deep Learning</h3>
+                <p style="color: var(--text-gray);">LSTM and CNN-LSTM models for high accuracy</p>
+            </div>
+            <div style="text-align: center;">
+                <i class="fas fa-history" style="font-size: 2.5rem; color: var(--success-color); margin-bottom: 1rem;"></i>
+                <h3>Past & Future</h3>
+                <p style="color: var(--text-gray);">View historical data and future predictions</p>
+            </div>
+            <div style="text-align: center;">
+                <i class="fas fa-wind" style="font-size: 2.5rem; color: var(--warning-color); margin-bottom: 1rem;"></i>
+                <h3>Wind Direction</h3>
+                <p style="color: var(--text-gray);">Detailed wind speed and direction analysis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 4rem 5%;">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">About The Project</h2>
+            <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 2rem;">
+                This project utilizes state-of-the-art deep learning techniques including LSTM and CNN-LSTM 
+                networks to predict rainfall patterns across Tamilnadu. By analyzing historical weather data 
+                including temperature, humidity, pressure, wind patterns, and geographical coordinates, 
+                our system provides accurate location-based rainfall predictions.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 1rem;">
+                    <i class="fas fa-database" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h4 style="margin: 1rem 0;">Data Sources</h4>
+                    <p style="color: var(--text-gray);">Historical weather datasets, Real-time API integration</p>
+                </div>
+                <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 1rem;">
+                    <i class="fas fa-chart-bar" style="font-size: 2rem; color: var(--success-color);"></i>
+                    <h4 style="margin: 1rem 0;">Accuracy</h4>
+                    <p style="color: var(--text-gray);">95% prediction accuracy with deep learning models</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h4 style="color: white; margin-bottom: 1rem;">RainPredict TN</h4>
+                    <p style="color: var(--text-gray);">Advanced rainfall prediction system for Tamilnadu agriculture and planning</p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1rem;">Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.5rem;"><a href="/" style="color: var(--text-gray); text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/dashboard" style="color: var(--text-gray); text-decoration: none;">Dashboard</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#about" style="color: var(--text-gray); text-decoration: none;">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1rem;">Contact</h4>
+                    <p style="color: var(--text-gray);"><i class="fas fa-envelope"></i> ------  -----------</p>
+                    <p style="color: var(--text-gray);"><i class="fas fa-phone"></i> +91 00000 00000</p>
+                </div>
+            </div>
+            <hr style="border-color: #334155; margin: 2rem 0;">
+            <p style="color: var(--text-gray);">© 2026 RainPredict TN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <input type="hidden" id="locations-data" value='{{ locations | tojson }}'>
+</body>
+</html>

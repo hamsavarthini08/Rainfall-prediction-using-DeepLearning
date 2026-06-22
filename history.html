@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Data - Rainfall Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-cloud-rain"></i>
+            <span>RainPredict TN</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="/history" class="active"><i class="fas fa-history"></i> Historical</a></li>
+            <li><a href="/about"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard-container">
+        <div id="alert-container"></div>
+
+        <!-- Historical Data Selection -->
+        <div class="selection-panel">
+            <h2><i class="fas fa-history"></i> Historical Weather Analysis</h2>
+            <div class="selection-grid">
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Select Location</label>
+                    <select id="location">
+                        <option value="">Choose a district...</option>
+                        {% for location in locations %}
+                        <option value="{{ location }}">{{ location }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Select Year</label>
+                    <select id="year">
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <button id="loadHistoryBtn" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Load Historical Data
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historical Statistics -->
+        <div style="margin-top: 2rem;">
+            <h2><i class="fas fa-chart-bar"></i> Historical Statistics</h2>
+            <div class="stats-grid" id="historicalStats">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #2563eb;">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Annual Rainfall</h4>
+                        <p id="annualRainfall">-- mm</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #10b981;">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Avg Temperature</h4>
+                        <p id="avgTempHistorical">--°C</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #f59e0b;">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Avg Wind Speed</h4>
+                        <p id="avgWindHistorical">-- km/h</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #ef4444;">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Max Rainfall</h4>
+                        <p id="maxRainfall">-- mm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historical Charts -->
+        <div class="charts-container">
+            <div class="chart-card">
+                <h3><i class="fas fa-chart-line"></i> Monthly Rainfall Trend</h3>
+                <canvas id="monthlyRainfallChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3><i class="fas fa-chart-bar"></i> Temperature Variation</h3>
+                <canvas id="monthlyTempChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Historical Data Table -->
+        <div style="margin-top: 2rem;">
+            <h2><i class="fas fa-table"></i> Monthly Weather Summary</h2>
+            <div style="background: var(--card-bg); border-radius: 1rem; padding: 1.5rem; margin-top: 1rem;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Rainfall (mm)</th>
+                            <th>Temperature (°C)</th>
+                            <th>Humidity (%)</th>
+                            <th>Wind Speed (km/h)</th>
+                            <th>Dominant Direction</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historicalTableBody">
+                        <tr>
+                            <td colspan="6" style="text-align: center; color: var(--text-gray);">
+                                Select location and year to view historical data
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Year Comparison -->
+        <div style="margin-top: 2rem;">
+            <h2><i class="fas fa-chart-simple"></i> Year-over-Year Comparison</h2>
+            <div class="chart-card">
+                <canvas id="yearComparisonChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="locations-data" value='{{ locations | tojson }}'>
+    <script src="{{ url_for('static', filename='js/history.js') }}"></script>
+</body>
+</html>
